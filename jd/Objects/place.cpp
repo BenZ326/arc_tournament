@@ -33,6 +33,5 @@ place* place::createObj(const std::vector<std::string> &cells)
 		obj->_first_receive_tm=boost::posix_time::duration_from_string("00:00:00");
 		obj->_last_receive_tm=boost::posix_time::duration_from_string("00:00:00");
 	}
-	std::cout<<obj->_first_receive_tm.hours()<<"h"<<obj->_first_receive_tm.minutes()<<std::endl;
 	return obj;
 }

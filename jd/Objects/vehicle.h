@@ -5,9 +5,18 @@
 class vehicle
 {
 public:
-	static vehicle* createObj();
+	static vehicle* createObj(const std::vector<std::string> &cells);
+	int TypeId() const {return _vehicle_type_id;}
+	std::string TypeName() const {return _vehicle_type_name;}
+	double MaxVolume() const {return _max_volume;}
+	double MaxWeight() const {return _max_weight;}
+	int VehicleCnt() const {return _vehicle_cnt;}
+	int DrivingRange() const {return _driving_range;}
+	double ChargeTm() const {return _charge_tm;}
+	double UnitTransCost() const {return _unit_trans_cost;}
+	double VehicleCost() const {return _vehicle_cost;}
 private:
-	std::string _vehicle_type_id;	//车型编号
+	int _vehicle_type_id;	//车型编号
 	std::string _vehicle_type_name;	//车型名称
 	double _max_volume;		//最高装载容积(m^3)
 	double _max_weight;		//核定载重(t)

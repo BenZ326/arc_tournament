@@ -5,8 +5,9 @@ int main()
 {
 
 	ObjMgr::instance()->loadplaces();
-
-system("pause");
+	ObjMgr::instance()->loadvehicles();
+	ObjMgr::instance()->loaddistance();
+	system("pause");
 
 
 
